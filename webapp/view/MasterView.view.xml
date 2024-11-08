@@ -1,0 +1,49 @@
+<mvc:View
+    controllerName="com.sce.epportal.enterpriseprocurementportal.controller.MasterView"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+
+    	<IconTabBar
+		id="idIconTabBarNoIcons"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter text="Request Types" key="info">
+								<mvc:XMLView viewName="com.sce.epportal.enterpriseprocurementportal.view.RequestType"/>
+
+			</IconTabFilter>
+			<IconTabFilter text="Request Type Fields" key="attachments">
+							<mvc:XMLView viewName="com.sce.epportal.enterpriseprocurementportal.view.RequestTypeFields"/>
+
+			</IconTabFilter>
+			<IconTabFilter text="Documents" key="notes">
+							<mvc:XMLView viewName="com.sce.epportal.enterpriseprocurementportal.view.RequestTypeDocuments"/>
+
+			</IconTabFilter>
+			<IconTabFilter text="Questionnaire" key="people">
+								<mvc:XMLView viewName="com.sce.epportal.enterpriseprocurementportal.view.RequestTypeQuestions"/>
+
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
+
+	<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button type="Accept" text="Save"/>
+				<Button type="Reject" text="Cancel"/>
+			</OverflowToolbar>
+		</footer>
+
+
+    </Page>
+</mvc:View>
+
+

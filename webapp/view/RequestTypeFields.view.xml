@@ -1,0 +1,247 @@
+<mvc:View
+    controllerName="com.sce.epportal.enterpriseprocurementportal.controller.RequestTypeFields"
+    xmlns:table="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns:m="sap.m"
+    height="100%"
+>
+    <mvc:content>
+        <table:Table
+            id="tableDisp"
+            enableBusyIndicator="true"
+            showNoData="true"
+            selectionMode="None"
+            rowActionCount="30"
+            width="auto"
+            class="sapUiResponsiveMargin"
+            rows="{JSONModel>/requestTypes}"
+        >
+            <table:columns>
+                <table:Column width="14rem">
+                    <m:Label text="Request Type" />
+                    <table:template>
+                        <m:Text
+                            text="{JSONModel>name}"
+                            wrapping="false"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label
+                        text="OU"
+                        vAlign="Middle"
+                    />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="Commodity Type" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="Category" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+                <table:Column width="8rem">
+                    <m:Label text="Budget" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+                <table:Column width="8rem">
+                    <m:Label text="Proj.Name" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+                <table:Column width="8rem">
+                    <m:Label text="Est. Proj $" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+                <table:Column width="8rem">
+                    <m:Label text="Est.Proj.St.Date" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+                <table:Column width="8rem">
+                    <m:Label text="Est.Proj.End Date" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+                <table:Column width="8rem">
+                    <m:Label text="Type Funding" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="Cyber Risk Level" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="Potential Supplier" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="NERC CIP" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="Priority" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="Edison Rep." />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="Proc. Details" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="Attachments" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="PO Number" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+
+                <table:Column width="8rem">
+                    <m:Label text="Field New" />
+                    <table:template>
+                        <m:CheckBox
+                            selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                        />
+                    </table:template>
+                </table:Column>
+            </table:columns>
+        </table:Table>
+    </mvc:content>
+</mvc:View>

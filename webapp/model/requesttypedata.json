@@ -1,0 +1,72 @@
+{
+    "requestTypes": [
+        {
+            "name": "RFx",
+            "questions":"What is procurement?"
+        },
+        {
+            "name": "Contract Nogotiations"  ,
+            "questions":"stages in the procurement process?" 
+        },
+        {
+            "name": "Contract Amendment",
+            "questions":"What is purchasing?"  
+        },
+        {
+            "name": "Purchase Order",
+            "questions":"What is a purchase order"   
+        },
+        {
+            "name": "Change Order",
+            "questions":"What is supplier evaluation"  
+        },
+        {
+            "name": "Supplier Qualification Request",
+            "questions":"What is a request for proposal (RFP)?"  
+        },
+        {
+            "name": "Vendor Master update",
+            "questions":"What is supplier evaluation"   
+        },
+        {
+            "name": "Payment & Invoice Issues",
+            "questions":"What is procurement?"   
+        },
+        {
+            "name": "Other",
+            "questions":"What is procurement?"   
+        },
+        {
+            "name": "Project Support",
+            "questions":"What is procurement?"   
+        },
+        {
+            "name": "Category deepdives",
+            "questions":"What is procurement?"   
+        },
+        {
+            "name": "Supplier Performace",
+            "questions":"What is procurement?"  
+        },
+        {
+            "name": "SOW",
+            "questions":"What is procurement?"  
+        },
+        {
+            "name": "Other",
+            "questions":"What is procurement?"   
+        },
+        {
+            "name": "Project Support",
+            "questions":"What is procurement?"  
+        },
+        {
+            "name": "Non Procurement contract request",
+            "questions":"What is procurement?" 
+        },
+        {
+            "name": "Commercial terms nogotiations*",
+            "questions":"What is procurement?"   
+        }
+    ]
+}

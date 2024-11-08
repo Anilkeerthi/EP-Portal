@@ -1,0 +1,115 @@
+<mvc:View controllerName="com.sce.epportal.enterpriseprocurementportal.controller.RequestType"
+      xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:m="sap.m"
+    xmlns:f="sap.f"
+    xmlns:core="sap.ui.core"
+    xmlns:fb="sap.ui.comp.filterbar"
+    xmlns:svm="sap.ui.comp.smartvariants"
+    xmlns:table="sap.ui.table"
+    xmlns:rowmodes="sap.ui.table.rowmodes"
+    xmlns:u="sap.ui.unified">
+     <mvc:content>
+        <f:DynamicPageTitle>
+            <f:heading>
+                <m:Title text="Request Type Table" level="H1" />
+            </f:heading>
+        </f:DynamicPageTitle>
+ 
+ <f:DynamicPageHeader>
+    <HBox class="customMargin"  justifyContent="SpaceBetween">
+        <!-- MultiComboBox for Request Type -->
+        <m:MultiComboBox
+            placeholder="Select Request Type"
+            width="100%"
+            maxWidth="20rem"
+            id="multiComboBox"
+            selectionChange="onCustomFieldChange"
+            items="{ path: 'dataModel>/Object' }">
+            <core:Item key="{dataModel>KEY}" text="{dataModel>IntakeRequestType}" />
+        </m:MultiComboBox>
+ 
+        <!-- MultiComboBox for Active Status -->
+        <m:MultiComboBox
+            placeholder="Select Active"
+            width="100%"
+            maxWidth="15rem"
+            id="multiComboBoxActive"
+            selectionChange="onCustomFieldChange"
+            items="{ path: 'dataModel>/Object' }">
+            <core:Item key="{dataModel>KEY}" text="{dataModel>ACTIVE}" />
+        </m:MultiComboBox>
+ 
+        <!-- Buttons for actions -->
+        <HBox class="custom" justifyContent="End"  width="auto">
+            <Button
+                icon="sap-icon://add"
+                tooltip="Add New Data"
+                press="onAdd"
+                type="Transparent" />
+            <Button
+                icon="sap-icon://excel-attachment"
+                tooltip="Export to Excel"
+                press="onExport"
+                type="Transparent" />
+            <Button
+                icon="sap-icon://edit"
+                tooltip="Edit Selected"
+                press="onEdit"
+                type="Transparent" />
+        </HBox>
+    </HBox>
+ 
+    <!-- FileUploader with responsive adjustments -->
+    <HBox class="Bowser" justifyContent="Start" alignItems="Center" width="100%">
+        <u:FileUploader change="handleUpload" />
+        <ToolbarSpacer />
+    </HBox>
+</f:DynamicPageHeader>
+ 
+ 
+       
+            <table:Table
+                class="RequestTable"
+                id="scopeItemsTable"
+                selectionMode="None"
+                rows="{dataModel>/Object}"
+                ariaLabelledBy="title">
+                
+                <table:columns>
+                    <table:Column width="7rem">
+                        <Label text="KEY" />
+                        <table:template>
+                            <m:Text text="{dataModel>KEY}" wrapping="false" />
+                        </table:template>
+                    </table:Column>
+ 
+                    <table:Column width="20rem" id="RequestType">
+                        <Label text="IntakeRequestType" />
+                        <table:template>
+                            <m:Input
+                                value="{dataModel>IntakeRequestType}"
+                                editable="{viewModel>/isEditMode}" />
+                        </table:template>
+                    </table:Column>
+ 
+                    <table:Column width="7rem" id="Active">
+                        <m:Label text="ACTIVE" />
+                        <table:template>
+                            <m:CheckBox selected="{path: 'dataModel>ACTIVE', formatter: '.formatBoolean'}" />
+                        </table:template>
+                    </table:Column>
+ 
+                    <table:Column id="HelpText">
+                        <Label text="HelpText" />
+                        <table:template>
+                            <m:Input
+                                value="{dataModel>HelpText}"
+                                editable="{viewModel>/isEditMode}" />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+            </table:Table>
+    </mvc:content>
+</mvc:View>

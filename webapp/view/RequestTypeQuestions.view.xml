@@ -1,0 +1,147 @@
+<mvc:View controllerName="com.sce.epportal.enterpriseprocurementportal.controller.RequestTypeQuestions"
+  xmlns:table="sap.ui.table"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:u="sap.ui.unified"
+    xmlns:c="sap.ui.core"
+    xmlns:m="sap.m"
+    height="100%">
+   <m:Page
+        showHeader="false"
+        enableScrolling="false"
+        class="sapUiContentPadding">
+        <m:content>
+            <table:Table
+                class="RequestTable"
+                id="scopeItemsTableC"
+                selectionMode="None"
+                  rowActionCount="30"
+                rows="{JSONModel>/requestTypes}"
+                ariaLabelledBy="title"
+               
+            >
+                <table:columns>
+                    <table:Column width="14rem">
+                        <m:Label text="Questions" />
+                        <table:template>
+                            <m:Text text="{JSONModel>questions}" wrapping="false" />
+                        </table:template>
+                    </table:Column>
+ 
+                    <table:Column width="8rem">
+                        <m:Label text="RFx" vAlign="Middle" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+ 
+                    <table:Column width="8rem">
+                        <m:Label text="Contract Nogotiations" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+ 
+                    <table:Column width="8rem">
+                        <m:Label text="Contract Amendment" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+                    <table:Column width="8rem">
+                        <m:Label text="Purchase Order" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+                    <table:Column width="8rem">
+                        <m:Label text="Change Order" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+                    <table:Column width="8rem">
+                        <m:Label text="Supplier Qualification Request" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+                    <table:Column width="8rem">
+                        <m:Label text="Vendor Master update" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+                    <table:Column width="8rem">
+                        <m:Label text="Payment Invoice Issues" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+                    <table:Column width="8rem">
+                        <m:Label text="Other" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+ 
+                     <table:Column width="8rem">
+                        <m:Label text="Project Support" />
+                        <table:template>
+                            <m:CheckBox
+                                selected="{
+                                    path: 'Heavy',
+                                    type: 'sap.ui.model.type.String'
+                                }"
+                            />
+                        </table:template>
+                    </table:Column>
+                </table:columns>
+            </table:Table>
+        </m:content>
+    </m:Page>
+</mvc:View>
